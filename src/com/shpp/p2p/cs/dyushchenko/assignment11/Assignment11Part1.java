@@ -177,7 +177,7 @@ public class Assignment11Part1 {
                 }
                 if (!currentPixel.isBackground() && !currentPixel.isVisited()) {
                     SilhouetteCharacteristics silhouette = exploreSilhouette(smartPixelArray, currentPixel);
-                    if (isSilhouetteBigEnough(silhouette.getLenght(), silhouette.getWidth(), smartPixelArray)) {
+                    if (isSilhouetteBigEnough(silhouette.getLength(), silhouette.getWidth(), smartPixelArray)) {
                         silCount++;
                     }
                 }
@@ -265,12 +265,12 @@ public class Assignment11Part1 {
     /**
      * Checks whether the silhouette is large enough to be counted.
      *
-     * @param lenght          The lenght of the silhouette.
+     * @param length          The length of the silhouette.
      * @param width           The width of the silhouette.
      * @param smartPixelArray The 2D array of SmartPixels.
      * @return True if large enough to be counted, false otherwise.
      */
-    private boolean isSilhouetteBigEnough(int lenght, int width, SmartPixel[][] smartPixelArray) {
-        return (lenght > (smartPixelArray.length * MIN_SILHOUETTE_SCALE)) || (width > (smartPixelArray[0].length * MIN_SILHOUETTE_SCALE));
+    private boolean isSilhouetteBigEnough(int length, int width, SmartPixel[][] smartPixelArray) {
+        return (length > (smartPixelArray.length * MIN_SILHOUETTE_SCALE)) || (width > (smartPixelArray[0].length * MIN_SILHOUETTE_SCALE));
     }
 }
