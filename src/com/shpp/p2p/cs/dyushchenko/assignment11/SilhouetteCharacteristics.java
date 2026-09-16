@@ -1,14 +1,14 @@
 package com.shpp.p2p.cs.dyushchenko.assignment11;
 
 /**
- * Stores the lenght and width of the silhouette, which are calculated based
+ * Stores the length and width of the silhouette, which are calculated based
  * on its coordinates in the pixel grid (minimum/maximum row and column of the silhouette).
  */
 public class SilhouetteCharacteristics {
     /**
-     * The lenght of the silhouette.
+     * The length of the silhouette.
      */
-    private final int lenght;
+    private final int length;
     /**
      * The width of the silhouette.
      */
@@ -25,12 +25,12 @@ public class SilhouetteCharacteristics {
      * @param maxCol The maximum column index of the silhouette.
      */
     public SilhouetteCharacteristics(int minRow, int maxRow, int minCol, int maxCol) {
-        this.lenght = maxRow - minRow;
+        this.length = maxRow - minRow;
         this.width = maxCol - minCol;
     }
 
-    public int getLenght() {
-        return lenght;
+    public int getLength() {
+        return length;
     }
 
     public int getWidth() {
